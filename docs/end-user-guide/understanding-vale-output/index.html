@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Understanding vale output :: Vale for Red Hat documentation writers</title>
+    <link rel="canonical" href="https://rolfedh.github.io/studious-fortnight/docs/end-user-guide/understanding-vale-output/">
+    <meta name="keywords" content="understanding, output">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/extra.css">
+<link rel="stylesheet" href="../../../_/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <button class="navbar-burger" data-target="topbar-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <img src="../../../_/img/project-logo.svg" class="navbar-logo" alt="Project logo">
+        <a href="https://rolfedh.github.io/studious-fortnight/index.html">Vale for Red Hat documentation writers</a>
+      </div>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item hide-for-print">
+          <script async src="https://cse.google.com/cse.js?cx=002898025167115630151:gnr5edrg2eo"></script>
+          <div class="gcse-searchbox" enableAutoComplete="true"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="gcse-searchresults"></div>
+</header><div class="body">
+<div class="nav-container" data-component="docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../introduction/">Vale for Red Hat documentation writers</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction/">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../getting-started-with-vale/">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="./">Understanding output</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../adding-vale-configuration-to-a-project/">Adding to a project</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../defining-a-vale-onboarding-strategy/">Onboarding strategy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../contributing/">Contributing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extending-the-vocabulary/">Extending the vocabulary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extending-styles/">Extending styles</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Vale for Red Hat documentation writers</span>
+    <span class="version">main</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../introduction/">Vale for Red Hat documentation writers</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../introduction/">main</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../introduction/" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../introduction/">Vale for Red Hat documentation writers</a></li>
+    <li><a href="../getting-started-with-vale/">Getting started</a></li>
+    <li><a href="./">Understanding output</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rolfedh/studious-fortnight/edit/main/modules/end-user-guide/pages/understanding-vale-output.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Understanding vale output</h1>
+<h1 id="con_understanding-vale-output_docs" class="sect0"><a class="anchor" href="#con_understanding-vale-output_docs"></a>Understanding vale output</h1>
+<div class="paragraph">
+<p>As a technical writer, you typically run <code>vale</code> on the command-line against a content file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd openshift-docs/logging/troubleshooting/
+$ vale cluster-logging-troubleshooting-for-critical-alerts.adoc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The resulting command output gives you a list of suggestions, warnings, and errors based on customizable styles and vocabulary.</p>
+</div>
+<div class="paragraph">
+<p>As a writer, you review the output, decide which issues are valid, and update your content accordingly.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. <code>vale</code> command line output example</div>
+<div class="content">
+<pre>
+238:27 <font color="#CC0000">error</font>      Did you really mean        Vale.Spelling
+                    &apos;rebalancing&apos;?
+244:6  <font color="#3465A4">suggestion</font> Verify your use of &apos;there  IBM.Usage
+                  are&apos; with the word usage
+                  guidelines.
+244:38 <font color="#C4A000">warning</font>    Consider using &apos;available&apos; CheDocs.CommonTerms
+                  rather than &apos;present&apos;
+</pre>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_understanding_the_vale_command_line_tool_output_presentation"><a class="anchor" href="#_understanding_the_vale_command_line_tool_output_presentation"></a>Understanding the <code>vale</code> command line tool output presentation:</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">First column</dt>
+<dd>
+<p>The line and character number of the issue, such as: <code>244:6</code>.</p>
+</dd>
+<dt class="hdlist1">Second column</dt>
+<dd>
+<p>The alert level, such as <code>error</code>, <code>suggestion</code>, or <code>warning</code>. See: <a href="#understanding-vale-alert-levels_docs">Understanding Vale alert levels</a></p>
+</dd>
+<dt class="hdlist1">Third column</dt>
+<dd>
+<p>The rule message, such as: <code>Verify your use of 'there are'</code></p>
+</dd>
+<dt class="hdlist1">Fourth column</dt>
+<dd>
+<p>The name of the style and of the rule, such as: <code>IBM.Usage</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="understanding-vale-alert-levels_docs"><a class="anchor" href="#understanding-vale-alert-levels_docs"></a>Understanding Vale alert levels</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">error</dt>
+<dd>
+<p>Fix the language error. This alert level includes spelling errors, which are frequently happening on products and tools names. In that case, consider extending the Vocabulary. See <a href="../extending-the-vocabulary/" class="page">Extending the vocabulary</a>.</p>
+</dd>
+<dt class="hdlist1">warning</dt>
+<dd>
+<p>Consider fixing the language error.</p>
+</dd>
+<dt class="hdlist1">suggestion</dt>
+<dd>
+<p>Heads up! Verify the usage depending on the context. Content containing suggestions is fine.</p>
+</dd>
+</dl>
+</div>
+<div class="ulist">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="../defining-a-vale-onboarding-strategy/" class="page">Defining a vale onboarding strategy</a></p>
+</li>
+<li>
+<p><a href="../extending-the-vocabulary/" class="page">Extending the vocabulary</a>.</p>
+</li>
+<li>
+<p><a href="../extending-styles/" class="page">Extending styles</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
