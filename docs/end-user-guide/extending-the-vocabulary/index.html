@@ -51,19 +51,22 @@
     <a class="nav-link" href="../introduction/">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../getting-started-with-vale/">Getting started</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../understanding-vale-output/">Understanding output</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../adding-vale-configuration-to-a-project/">Adding to a project</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../understanding-vale-output/">Understanding Vale alerts</a>
   </li>
-</ul>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-vale-in-the-ide/">Vale in the IDE</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../defining-a-vale-onboarding-strategy/">Onboarding strategy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../adding-vale-configuration-to-a-project/">Adding to a project</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -121,23 +124,103 @@
 <article class="doc">
 <h1 class="page">Extending the vocabulary</h1>
 <div class="sect1">
-<h2 id="proc_extending-the-vocabulary_docs"><a class="anchor" href="#proc_extending-the-vocabulary_docs"></a>Extending the vocabulary</h2>
+<h2 id="proc_extending-the-spelling-rule_docs"><a class="anchor" href="#proc_extending-the-spelling-rule_docs"></a>Extending the <strong>Spelling</strong> rule</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Consider extending the vocabulary when missing words in the Vale dictionary are causing <strong>Spelling</strong> errors. It happens frequently with product and tool names.</p>
+<p>Consider extending the <strong>Spelling</strong> rule in the <a href="https://github.com/rolfedh/studious-fortnight">studious-fortnight repository</a> when missing words in the Vale dictionary are causing <strong>Spelling</strong> errors and the fix could benefit to other projects. For example: product and tool names, common terms specific to the software industry.</p>
 </div>
-<div class="paragraph">
-<p>Consider the best approach:</p>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p><a href="../getting-started-with-vale/" class="page">Getting started with vale</a></p>
+</li>
+<li>
+<p><a href="../understanding-vale-output/" class="page">Understanding vale output</a></p>
+</li>
+<li>
+<p><a href="../defining-a-vale-onboarding-strategy/" class="page">Defining a vale onboarding strategy</a></p>
+</li>
+</ul>
 </div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Edit the <code>.vale/styles/RedHat/Spelling.yml</code> file and add the missing word. Ensure the entry is valid regular expression.</p>
+<div class="listingblock">
+<div class="title">Excerpt of the <strong>Spelling</strong> rule</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">extends: spelling
+message: "Did you really mean '%s'?"
+level: error
+# A "filter" is a case-sensitive regular expression specifying words
+# to ignore during spell checking.
+filters:
+  - '\.NET'
+  - 'Dev Workspace'
+  - 'I/O'
+  - "[dD]evfile"
+  - "[sS]harding"
+  - "Let\'s Encrypt"
+  - adoc
+  - Ansible
+  - Antora
+  - API
+  - AsciiDoc</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Edit the <code>.vale/fixtures/RedHat/Spelling/testvalid.adoc</code> file and add the missing word in a new line.</p>
+</li>
+<li>
+<p>Optionally, edit the <code>.vale/fixtures/RedHat/Spelling/testinvalid.adoc</code> file and add an undesired form of the missing word in a new line.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Run the <code>vale</code> command on a content file containing the word which was missing.</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd .vale/fixtures/RedHat/Spelling/
+$ vale .</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Vale should:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Extending the vocabulary in the common repository</p>
+<p>Report no error for the new term in the <code>testvalid.adoc</code> file</p>
 </li>
 <li>
-<p>Extending the vocabulary specific to the project</p>
+<p>Optionnally, report an error for the new term in the <code>testinvalid.adoc</code> file</p>
 </li>
 </ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://docs.errata.ai/vale/styles#spelling">Vale documentation - Spelling</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc_creating-a-vocabulary-for-a-project_docs"><a class="anchor" href="#proc_creating-a-vocabulary-for-a-project_docs"></a>Creating a vocabulary for a project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Consider adding a <strong>Vocabulary</strong> to your project when missing words in the Vale dictionary are causing <strong>Spelling</strong> errors and the word is too specific to benefit to other projects.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -157,15 +240,19 @@
 <div class="title">Procedure</div>
 <ul>
 <li>
-<p>Edit the <code>.vale/styles/Red-Hat-CCS/Vocab/RedHat/accept.txt</code> file and add the missing word. Ensure the entry is not case-sensitive.</p>
-<div class="exampleblock">
-<div class="title">Example 1. Entry in the vocabulary, not case-sensitive</div>
-<div class="content">
+<p>Create or edit the Vocabulary for your project: create or edit the <code>.vale/styles/Vocab/<em>&lt;Project&gt;</em>/accept.txt</code> file and add the missing word. Ensure the entry is not case-sensitive.</p>
 <div class="listingblock">
+<div class="title">Entry in the vocabulary, not case-sensitive</div>
 <div class="content">
 <pre>[Pp]odman</pre>
 </div>
 </div>
+</li>
+<li>
+<p>Register the Vocabulary in the <code>.vale.ini</code> file</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">Vocab = <em>&lt;Project&gt;</em></code></pre>
 </div>
 </div>
 </li>
