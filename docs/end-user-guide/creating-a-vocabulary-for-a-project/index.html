@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Extending the vocabulary :: Vale for Red Hat documentation writers</title>
-    <link rel="canonical" href="https://rolfedh.github.io/studious-fortnight/docs/end-user-guide/extending-the-vocabulary/">
+    <link rel="canonical" href="https://vale-at-red-hat.github.io/vale-at-red-hat/docs/end-user-guide/creating-a-vocabulary-for-a-project/">
     <meta name="keywords" content="contributing, vocabulary">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -24,7 +24,7 @@
           <span></span>
         </button>
         <img src="../../../_/img/project-logo.svg" class="navbar-logo" alt="Project logo">
-        <a href="https://rolfedh.github.io/studious-fortnight/index.html">Vale for Red Hat documentation writers</a>
+        <a href="https://vale-at-red-hat.github.io/vale-at-red-hat/index.html">Vale for Red Hat documentation writers</a>
       </div>
     </div>
     <div id="topbar-nav" class="navbar-menu">
@@ -46,9 +46,17 @@
     <h3 class="title"><a href="../introduction/">Vale for Red Hat documentation writers</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">End-user guide</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../introduction/">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../redhat-style-for-vale/">RedHat Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../getting-started-with-vale/">Getting started</a>
@@ -65,20 +73,29 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../adding-vale-configuration-to-a-project/">Adding to a project</a>
   </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="./">Extending the vocabulary</a>
+  </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../contributing/">Contributing</a>
-<ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="./">Extending the vocabulary</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../extending-styles/">Extending styles</a>
-  </li>
 </ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Contributor guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/contributing/">Contributing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/vale-at-red-hat-repository/">Repository</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-spelling-rule/">Extending <em>Spelling</em></a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-redhat-style/">Extending rules</a>
   </li>
 </ul>
   </li>
@@ -111,11 +128,11 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../introduction/">Vale for Red Hat documentation writers</a></li>
-    <li><a href="../contributing/">Contributing</a></li>
+    <li>End-user guide</li>
     <li><a href="./">Extending the vocabulary</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/rolfedh/studious-fortnight/edit/main/modules/end-user-guide/pages/extending-the-vocabulary.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/vale-at-red-hat/vale-at-red-hat/edit/main/modules/end-user-guide/pages/creating-a-vocabulary-for-a-project.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -124,103 +141,23 @@
 <article class="doc">
 <h1 class="page">Extending the vocabulary</h1>
 <div class="sect1">
-<h2 id="proc_extending-the-spelling-rule_docs"><a class="anchor" href="#proc_extending-the-spelling-rule_docs"></a>Extending the <strong>Spelling</strong> rule</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Consider extending the <strong>Spelling</strong> rule in the <a href="https://github.com/rolfedh/studious-fortnight">studious-fortnight repository</a> when missing words in the Vale dictionary are causing <strong>Spelling</strong> errors and the fix could benefit to other projects. For example: product and tool names, common terms specific to the software industry.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p><a href="../getting-started-with-vale/" class="page">Getting started with vale</a></p>
-</li>
-<li>
-<p><a href="../understanding-vale-output/" class="page">Understanding vale output</a></p>
-</li>
-<li>
-<p><a href="../defining-a-vale-onboarding-strategy/" class="page">Defining a vale onboarding strategy</a></p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Edit the <code>.vale/styles/RedHat/Spelling.yml</code> file and add the missing word. Ensure the entry is valid regular expression.</p>
-<div class="listingblock">
-<div class="title">Excerpt of the <strong>Spelling</strong> rule</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">extends: spelling
-message: "Did you really mean '%s'?"
-level: error
-# A "filter" is a case-sensitive regular expression specifying words
-# to ignore during spell checking.
-filters:
-  - '\.NET'
-  - 'Dev Workspace'
-  - 'I/O'
-  - "[dD]evfile"
-  - "[sS]harding"
-  - "Let\'s Encrypt"
-  - adoc
-  - Ansible
-  - Antora
-  - API
-  - AsciiDoc</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Edit the <code>.vale/fixtures/RedHat/Spelling/testvalid.adoc</code> file and add the missing word in a new line.</p>
-</li>
-<li>
-<p>Optionally, edit the <code>.vale/fixtures/RedHat/Spelling/testinvalid.adoc</code> file and add an undesired form of the missing word in a new line.</p>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>Run the <code>vale</code> command on a content file containing the word which was missing.</p>
-<div class="listingblock">
-<div class="content">
-<pre>$ cd .vale/fixtures/RedHat/Spelling/
-$ vale .</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Vale should:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Report no error for the new term in the <code>testvalid.adoc</code> file</p>
-</li>
-<li>
-<p>Optionnally, report an error for the new term in the <code>testinvalid.adoc</code> file</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="https://docs.errata.ai/vale/styles#spelling">Vale documentation - Spelling</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="proc_creating-a-vocabulary-for-a-project_docs"><a class="anchor" href="#proc_creating-a-vocabulary-for-a-project_docs"></a>Creating a vocabulary for a project</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Consider adding a <strong>Vocabulary</strong> to your project when missing words in the Vale dictionary are causing <strong>Spelling</strong> errors and the word is too specific to benefit to other projects.</p>
+<p>Consider adding a <strong>Vocabulary</strong> to your project when:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Missing words in the Vale dictionary are causing <strong>Spelling</strong> errors</p>
+</li>
+<li>
+<p>The word is too specific to benefit to other projects.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When adding the word will benefit to other projects, consider <a href="../../contributor-guide/extending-the-spelling-rule/" class="page">Extending the <em>Spelling</em> rule</a>. For example: product and tool names, common terms specific to the software industry.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>

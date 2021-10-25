@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Getting started with vale :: Vale for Red Hat documentation writers</title>
-    <link rel="canonical" href="https://rolfedh.github.io/studious-fortnight/docs/end-user-guide/getting-started-with-vale/">
+    <link rel="canonical" href="https://vale-at-red-hat.github.io/vale-at-red-hat/docs/end-user-guide/getting-started-with-vale/">
     <meta name="keywords" content="vale">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -24,7 +24,7 @@
           <span></span>
         </button>
         <img src="../../../_/img/project-logo.svg" class="navbar-logo" alt="Project logo">
-        <a href="https://rolfedh.github.io/studious-fortnight/index.html">Vale for Red Hat documentation writers</a>
+        <a href="https://vale-at-red-hat.github.io/vale-at-red-hat/index.html">Vale for Red Hat documentation writers</a>
       </div>
     </div>
     <div id="topbar-nav" class="navbar-menu">
@@ -46,9 +46,17 @@
     <h3 class="title"><a href="../introduction/">Vale for Red Hat documentation writers</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">End-user guide</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../introduction/">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../redhat-style-for-vale/">RedHat Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/">Glossary</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="./">Getting started</a>
@@ -66,19 +74,28 @@
     <a class="nav-link" href="../adding-vale-configuration-to-a-project/">Adding to a project</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
+    <a class="nav-link" href="../creating-a-vocabulary-for-a-project/">Extending the vocabulary</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../contributing/">Contributing</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../extending-the-vocabulary/">Extending the vocabulary</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../extending-styles/">Extending styles</a>
+    <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
   </li>
 </ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Contributor guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/contributing/">Contributing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/vale-at-red-hat-repository/">Repository</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-spelling-rule/">Extending <em>Spelling</em></a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-redhat-style/">Extending rules</a>
   </li>
 </ul>
   </li>
@@ -111,10 +128,11 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../introduction/">Vale for Red Hat documentation writers</a></li>
+    <li>End-user guide</li>
     <li><a href="./">Getting started</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/rolfedh/studious-fortnight/edit/main/modules/end-user-guide/pages/getting-started-with-vale.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/vale-at-red-hat/vale-at-red-hat/edit/main/modules/end-user-guide/pages/getting-started-with-vale.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -126,7 +144,7 @@
 <h2 id="proc_using-vale-on-a-local-environment_docs"><a class="anchor" href="#proc_using-vale-on-a-local-environment_docs"></a>Using vale on a local environment</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
-<p>To use vale on any project in your local environment without further configuration in the projects, install the Vale CLI and register the <strong>studious-fortnight</strong> vale configuration as the default.</p>
+<p>To use vale on any project in your local environment without further configuration in the projects, install the Vale CLI and register the <strong>vale-at-red-hat</strong> vale configuration as the default.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -155,18 +173,18 @@ On the Vale site, click the tab for your operating system.
 </div>
 </li>
 <li>
-<p>Get a copy of the <a href="https://github.com/rolfedh/studious-fortnight">studious-fortnight repository</a> to your local environment.</p>
+<p>Get a copy of the <a href="https://github.com/vale-at-red-hat/vale-at-red-hat">vale-at-red-hat repository</a> to your local environment.</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ git clone git@github.com:rolfedh/studious-fortnight.git</pre>
+<pre>$ git clone git@github.com:vale-at-red-hat/vale-at-red-hat.git</pre>
 </div>
 </div>
 </li>
 <li>
-<p>Register the <strong>studious-fortnight</strong> vale configuration as the default.</p>
+<p>Register the <strong>vale-at-red-hat</strong> vale configuration as the default.</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ cd studious-fortnight
+<pre>$ cd vale-at-red-hat
 $ ln -s "$PWD/.vale.ini" "$HOME/"
 $ ln -s "$PWD/.vale" "$HOME/"</pre>
 </div>

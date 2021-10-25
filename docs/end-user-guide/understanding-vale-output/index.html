@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Understanding vale output :: Vale for Red Hat documentation writers</title>
-    <link rel="canonical" href="https://rolfedh.github.io/studious-fortnight/docs/end-user-guide/understanding-vale-output/">
+    <link rel="canonical" href="https://vale-at-red-hat.github.io/vale-at-red-hat/docs/end-user-guide/understanding-vale-output/">
     <meta name="keywords" content="understanding, output">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -24,7 +24,7 @@
           <span></span>
         </button>
         <img src="../../../_/img/project-logo.svg" class="navbar-logo" alt="Project logo">
-        <a href="https://rolfedh.github.io/studious-fortnight/index.html">Vale for Red Hat documentation writers</a>
+        <a href="https://vale-at-red-hat.github.io/vale-at-red-hat/index.html">Vale for Red Hat documentation writers</a>
       </div>
     </div>
     <div id="topbar-nav" class="navbar-menu">
@@ -46,9 +46,17 @@
     <h3 class="title"><a href="../introduction/">Vale for Red Hat documentation writers</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">End-user guide</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../introduction/">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../redhat-style-for-vale/">RedHat Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../getting-started-with-vale/">Getting started</a>
@@ -66,19 +74,28 @@
     <a class="nav-link" href="../adding-vale-configuration-to-a-project/">Adding to a project</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
+    <a class="nav-link" href="../creating-a-vocabulary-for-a-project/">Extending the vocabulary</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../contributing/">Contributing</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../extending-the-vocabulary/">Extending the vocabulary</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../extending-styles/">Extending styles</a>
+    <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
   </li>
 </ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Contributor guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/contributing/">Contributing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/vale-at-red-hat-repository/">Repository</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-spelling-rule/">Extending <em>Spelling</em></a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-redhat-style/">Extending rules</a>
   </li>
 </ul>
   </li>
@@ -111,10 +128,11 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../introduction/">Vale for Red Hat documentation writers</a></li>
+    <li>End-user guide</li>
     <li><a href="./">Understanding Vale alerts</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/rolfedh/studious-fortnight/edit/main/modules/end-user-guide/pages/understanding-vale-output.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/vale-at-red-hat/vale-at-red-hat/edit/main/modules/end-user-guide/pages/understanding-vale-output.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -183,7 +201,7 @@ $ vale cluster-logging-troubleshooting-for-critical-alerts.adoc</pre>
 <dl>
 <dt class="hdlist1">error</dt>
 <dd>
-<p>Fix the language error. This alert level includes spelling errors, which are frequently happening on products and tools names. In that case, consider extending the Vocabulary. See <a href="../extending-the-vocabulary/" class="page">Extending the vocabulary</a>.</p>
+<p>Fix the language error. This alert level includes <em>Spelling</em> errors, which are frequently happening on products and tools names. In that case, consider <a href="../creating-a-vocabulary-for-a-project/" class="page">Extending the vocabulary</a> or <a href="../../contributor-guide/extending-the-spelling-rule/" class="page">Extending the <em>Spelling</em> rule</a>.</p>
 </dd>
 <dt class="hdlist1">warning</dt>
 <dd>
@@ -202,10 +220,13 @@ $ vale cluster-logging-troubleshooting-for-critical-alerts.adoc</pre>
 <p><a href="../defining-a-vale-onboarding-strategy/" class="page">Defining a vale onboarding strategy</a></p>
 </li>
 <li>
-<p><a href="../extending-the-vocabulary/" class="page">Extending the vocabulary</a>.</p>
+<p><a href="../creating-a-vocabulary-for-a-project/" class="page">Extending the vocabulary</a></p>
 </li>
 <li>
-<p><a href="../extending-styles/" class="page">Extending styles</a>.</p>
+<p><a href="../../contributor-guide/extending-the-spelling-rule/" class="page">Extending the <em>Spelling</em> rule</a></p>
+</li>
+<li>
+<p><a href="../../contributor-guide/extending-the-redhat-style/" class="page">Extending the <em>RedHat</em> style</a>.</p>
 </li>
 </ul>
 </div>

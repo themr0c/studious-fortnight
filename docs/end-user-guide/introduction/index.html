@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Introduction :: Vale for Red Hat documentation writers</title>
-    <link rel="canonical" href="https://rolfedh.github.io/studious-fortnight/docs/end-user-guide/introduction/">
+    <link rel="canonical" href="https://vale-at-red-hat.github.io/vale-at-red-hat/docs/end-user-guide/introduction/">
     <meta name="keywords" content="introduction, antora">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -24,7 +24,7 @@
           <span></span>
         </button>
         <img src="../../../_/img/project-logo.svg" class="navbar-logo" alt="Project logo">
-        <a href="https://rolfedh.github.io/studious-fortnight/index.html">Vale for Red Hat documentation writers</a>
+        <a href="https://vale-at-red-hat.github.io/vale-at-red-hat/index.html">Vale for Red Hat documentation writers</a>
       </div>
     </div>
     <div id="topbar-nav" class="navbar-menu">
@@ -46,9 +46,17 @@
     <h3 class="title"><a href="./">Vale for Red Hat documentation writers</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">End-user guide</span>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="./">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../redhat-style-for-vale/">RedHat Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../getting-started-with-vale/">Getting started</a>
@@ -66,19 +74,28 @@
     <a class="nav-link" href="../adding-vale-configuration-to-a-project/">Adding to a project</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
+    <a class="nav-link" href="../creating-a-vocabulary-for-a-project/">Extending the vocabulary</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../contributing/">Contributing</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../extending-the-vocabulary/">Extending the vocabulary</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../extending-styles/">Extending styles</a>
+    <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
   </li>
 </ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Contributor guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/contributing/">Contributing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/vale-at-red-hat-repository/">Repository</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-spelling-rule/">Extending <em>Spelling</em></a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-redhat-style/">Extending rules</a>
   </li>
 </ul>
   </li>
@@ -111,10 +128,11 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="./">Vale for Red Hat documentation writers</a></li>
+    <li>End-user guide</li>
     <li><a href="./">Introduction</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/rolfedh/studious-fortnight/edit/main/modules/end-user-guide/pages/introduction.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/vale-at-red-hat/vale-at-red-hat/edit/main/modules/end-user-guide/pages/introduction.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -125,9 +143,10 @@
 <div class="sect1">
 <h2 id="con_the-benefits-of-using-vale_docs"><a class="anchor" href="#con_the-benefits-of-using-vale_docs"></a>The benefits of using vale</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>How does Vale help you improve your content quality and productivity?</p>
-</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">How does Vale help you improve your content quality and productivity?</dt>
+<dd>
 <div class="ulist">
 <ul>
 <li>
@@ -147,87 +166,25 @@
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>The <a href="https://github.com/rolfedh/studious-fortnight">studious-fortnight repository</a> contains:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <strong>RedHat</strong> Vale style, containing language rules suitable for documentation in Open Source projects and mandatory for Red Hat products</p>
-</li>
-<li>
-<p>The associated Vale configuration file</p>
-</li>
-<li>
-<p>Documentation to start using Vale</p>
-</li>
-<li>
-<p>Guidelines to define a Vale onboarding strategy in a project</p>
-</li>
-<li>
-<p>Guidelines to contribute to the <strong>RedHat</strong> Style</p>
-</li>
-<li>
-<p>Guidelines to create a project specific Style or Vocabulary</p>
-</li>
-</ul>
+</dd>
+</dl>
 </div>
 <div class="ulist">
 <div class="title">Additional resources</div>
 <ul>
+<li>
+<p><a href="../redhat-style-for-vale/" class="page"><em>RedHat</em> style for Vale</a></p>
+</li>
+<li>
+<p><a href="../glossary/" class="page">Glossary</a></p>
+</li>
 <li>
 <p><a href="../getting-started-with-vale/" class="page">Getting started with vale</a></p>
 </li>
 <li>
 <p><a href="../defining-a-vale-onboarding-strategy/" class="page">Defining a vale onboarding strategy</a></p>
 </li>
-<li>
-<p><a href="../contributing/" class="page">Contributing</a></p>
-</li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="con_glossary_docs"><a class="anchor" href="#con_glossary_docs"></a>Glossary</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_vale_concepts"><a class="anchor" href="#_vale_concepts"></a>Vale concepts</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>vale</code></dt>
-<dd>
-<p>The Vale command-line tool.</p>
-</dd>
-<dt class="hdlist1">Rule</dt>
-<dd>
-<p>A YAML file defining a language issue, a proposed solution, and a link to more information.</p>
-</dd>
-<dt class="hdlist1">Style</dt>
-<dd>
-<p>A directory containing a collection of rules.</p>
-</dd>
-<dt class="hdlist1">Vocabulary</dt>
-<dd>
-<p>A directory containing lists of accepted and rejected words, applying to all styles. See <a href="../extending-the-vocabulary/" class="page">Extending the vocabulary</a>.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_vale_configuration_files"><a class="anchor" href="#_vale_configuration_files"></a>Vale configuration files</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>.vale</code> directory</dt>
-<dd>
-<p>Contains a collection of Styles and Vocabularies.</p>
-</dd>
-<dt class="hdlist1"><code>.vale.ini</code> configuration file</dt>
-<dd>
-<p>Tells Vale where to find the <code>.vale</code> directory and other important settings.</p>
-</dd>
-</dl>
-</div>
 </div>
 </div>
 </div>

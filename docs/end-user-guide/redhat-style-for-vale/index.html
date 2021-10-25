@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Contributing :: Vale for Red Hat documentation writers</title>
-    <link rel="canonical" href="https://rolfedh.github.io/studious-fortnight/docs/end-user-guide/contributing/">
-    <meta name="keywords" content="contributing">
+    <title>RedHat style for Vale :: Vale for Red Hat documentation writers</title>
+    <link rel="canonical" href="https://vale-at-red-hat.github.io/vale-at-red-hat/docs/end-user-guide/redhat-style-for-vale/">
+    <meta name="keywords" content="redhat-style-for-vale, antora">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="stylesheet" href="../../../_/css/extra.css">
@@ -24,7 +24,7 @@
           <span></span>
         </button>
         <img src="../../../_/img/project-logo.svg" class="navbar-logo" alt="Project logo">
-        <a href="https://rolfedh.github.io/studious-fortnight/index.html">Vale for Red Hat documentation writers</a>
+        <a href="https://vale-at-red-hat.github.io/vale-at-red-hat/index.html">Vale for Red Hat documentation writers</a>
       </div>
     </div>
     <div id="topbar-nav" class="navbar-menu">
@@ -46,9 +46,17 @@
     <h3 class="title"><a href="../introduction/">Vale for Red Hat documentation writers</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">End-user guide</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../introduction/">Introduction</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="./">RedHat Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../getting-started-with-vale/">Getting started</a>
@@ -66,19 +74,28 @@
     <a class="nav-link" href="../adding-vale-configuration-to-a-project/">Adding to a project</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../creating-a-vocabulary-for-a-project/">Extending the vocabulary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="./">Contributing</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../extending-the-vocabulary/">Extending the vocabulary</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../extending-styles/">Extending styles</a>
-  </li>
 </ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Contributor guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/contributing/">Contributing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/vale-at-red-hat-repository/">Repository</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-spelling-rule/">Extending <em>Spelling</em></a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-redhat-style/">Extending rules</a>
   </li>
 </ul>
   </li>
@@ -111,49 +128,63 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../introduction/">Vale for Red Hat documentation writers</a></li>
-    <li><a href="./">Contributing</a></li>
+    <li>End-user guide</li>
+    <li><a href="./">RedHat Style</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/rolfedh/studious-fortnight/edit/main/modules/end-user-guide/pages/contributing.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/vale-at-red-hat/vale-at-red-hat/edit/main/modules/end-user-guide/pages/redhat-style-for-vale.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Contributing</h1>
+<h1 class="page"><em>RedHat</em> style for Vale</h1>
 <div class="sect1">
-<h2 id="ref_contributing_docs"><a class="anchor" href="#ref_contributing_docs"></a>Contributing</h2>
+<h2 id="con_redhat-style-for-vale_docs"><a class="anchor" href="#con_redhat-style-for-vale_docs"></a><em>RedHat</em> style for Vale</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can help by doing any of the following:</p>
+<p>The <em>RedHat</em> style for Vale contains language rules suitable for documentation in Open Source projects and mandatory for Red Hat products. These language rules originates from:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Use Vale with the style rules from the studious-fortnight repository, see <a href="../getting-started-with-vale/" class="page">Getting started with vale</a></p>
+<p><a href="https://redhat-documentation.github.io/supplementary-style-guide/"><em>Red Hat supplementary style guide for product documentation</em></a></p>
 </li>
 <li>
-<p><a href="https://github.com/rolfedh/studious-fortnight/issues">Report issues and request enhancements</a></p>
+<p>Latest edition of the <em>IBM Style Guide</em></p>
 </li>
 <li>
-<p>Join the Slack channel, <a href="https://coreos.slack.com/archives/C0218RXJK5E">#vale-at-red-hat</a>, in the CoreOS workspace.</p>
+<p><a href="https://github.com/errata-ai/IBM">Vale-compatible implementation</a> of <a href="https://www.ibm.com/developerworks/library/styleguidelines/index.html"><em>IBM&#8217;s Developer Editorial Style Guide</em></a></p>
 </li>
 <li>
-<p><a href="../extending-the-vocabulary/" class="page">Extending the vocabulary</a></p>
-</li>
-<li>
-<p><a href="../extending-styles/" class="page">Extending styles</a></p>
-</li>
-<li>
-<p>To show appreciation and support for Joseph Kato&#8217;s work on Vale, consider <a href="https://docs.errata.ai/vale/about#sponsors">making a donation</a>.</p>
+<p><a href="https://github.com/errata-ai/en_US-web"><em>Custom Vale open-source dictionary for American English.</em></a></p>
 </li>
 </ul>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/open-source-wants-you.jpg" alt="Open Source wants you">
+<div class="paragraph">
+<p>The <a href="../../contributor-guide/vale-at-red-hat-repository/" class="page"><em>Vale at Red Hat</em> repository</a> contains the <em>RedHat</em> style in the following directory:</p>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre>.vale/styles/RedHat</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To use the <em>RedHat</em> style in your project you can decide to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../getting-started-with-vale/" class="page">Use the configuration in this repository as a default for any project</a></p>
+</li>
+<li>
+<p><a href="../using-vale-with-a-continuous-integration-service/" class="page">Use the styles ZIP archive with the Vale GitHub Action</a></p>
+</li>
+<li>
+<p><a href="../adding-vale-configuration-to-a-project/" class="page">Include a copy of the required styles in your project</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
