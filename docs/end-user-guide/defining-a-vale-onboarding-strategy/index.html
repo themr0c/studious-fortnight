@@ -59,13 +59,16 @@
     <a class="nav-link" href="../glossary/">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../getting-started-with-vale/">Getting started</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../understanding-vale-output/">Understanding Vale alerts</a>
+    <a class="nav-link" href="../using-vale-cli/">Vale CLI</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../using-vale-in-the-ide/">Vale in the IDE</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting-vale-alerts/">Vale reports</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../understanding-vale-output/">Understanding Vale alerts</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="./">Onboarding strategy</a>
@@ -75,6 +78,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../creating-a-vocabulary-for-a-project/">Extending the vocabulary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-vale-github-action/">GitHub Action</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
@@ -159,11 +165,72 @@
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="_decrease_the_number_of_alerts_without_changing_the_configuration_file"><a class="anchor" href="#_decrease_the_number_of_alerts_without_changing_the_configuration_file"></a>Decrease the number of alerts without changing the configuration file</h3>
-<div class="paragraph">
-<p>Consider these techniques to decrease the number of alerts:</p>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p><a href="../reporting-vale-alerts/" class="page">Generating extended Vale alerts reports</a></p>
+</li>
+<li>
+<p><a href="../understanding-vale-output/" class="page">Understanding vale output</a></p>
+</li>
+</ul>
 </div>
+<div class="sect2">
+<h3 id="_assess_the_project_maturity"><a class="anchor" href="#_assess_the_project_maturity"></a>Assess the project maturity</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Zero vale errors</dt>
+<dd>
+<p>The project is compliant with the <code>RedHat</code> style. Consider integration with a continuous integration service using the defaults from the <code>vale-at-red-hat</code> repository.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../using-vale-github-action/" class="page">Using vale GitHub Action</a></p>
+</li>
+<li>
+<p><a href="../using-vale-with-a-continuous-integration-service/" class="page">Using vale with a continuous integration service</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Under 100 Vale errors</dt>
+<dd>
+<p>The project is almost compliant with the <code>RedHat</code> style. Consider integration with a continuous integration service using the defaults from the <code>vale-at-red-hat</code> repository. Consider massively fixing the few errors.</p>
+</dd>
+<dt class="hdlist1">Over 100 Vale errors</dt>
+<dd>
+<p>The project is big or poorly compliant with the <code>RedHat</code> style. Consider further investigation to understand the issue.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fix_the_alerts"><a class="anchor" href="#_fix_the_alerts"></a>Fix the alerts</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Run campaigns focused on one target such as: fix all errors, fix all occurrences of a given rule.</p>
+</li>
+<li>
+<p>Disable a rule that is irrelevant in the file context. See: <a href="https://docs.errata.ai/vale/scoping">Vale - Scoping</a></p>
+<div class="listingblock">
+<div class="content">
+<pre>pass:[&lt;!-- vale RedHat.Spelling = NO --&gt;]
+
+The Spelling rule is ignored for this line.
+
+pass:[&lt;!-- vale RedHat.Spelling = YES --&gt;]
+
+The Spelling rule is active for this line.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_display_less_alerts_without_changing_the_configuration_file"><a class="anchor" href="#_display_less_alerts_without_changing_the_configuration_file"></a>Display less alerts without changing the configuration file</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -182,49 +249,41 @@
 </div>
 </div>
 </li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_contributing_to_the_vale_at_red_hat_repository"><a class="anchor" href="#_contributing_to_the_vale_at_red_hat_repository"></a>Contributing to the <em>vale-at-red-hat</em> repository</h3>
+<div class="ulist">
+<ul>
 <li>
-<p>Disable <strong>rules</strong> in a specific <code>.vale.ini</code> configuration. See <a href="https://docs.errata.ai/vale/config">Vale documentation - configuration</a>.</p>
-<div class="listingblock">
-<div class="content">
-<pre>Vale.Repetition = NO</pre>
-</div>
-</div>
+<p><a href="../../contributor-guide/extending-the-spelling-rule/" class="page">Extending the <em>Spelling</em> rule</a></p>
 </li>
 <li>
-<p>Alter <strong>rules</strong> severity in a specific <code>.vale.ini</code> configuration. See <a href="https://docs.errata.ai/vale/config">Vale documentation - configuration</a>.</p>
+<p><a href="../../contributor-guide/extending-the-redhat-style/" class="page">Extending the <em>RedHat</em> style</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_decrease_the_number_of_alerts_requesting_adding_vale_configuration_to_a_project"><a class="anchor" href="#_decrease_the_number_of_alerts_requesting_adding_vale_configuration_to_a_project"></a>Decrease the number of alerts requesting <a href="../adding-vale-configuration-to-a-project/" class="page">Adding vale configuration to a project</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../creating-a-vocabulary-for-a-project/" class="page">Extending the vocabulary</a></p>
+</li>
+<li>
+<p>Altering <strong>rules</strong> severity or disabling <strong>rules</strong> for the project. See <a href="../adding-vale-configuration-to-a-project/" class="page">Adding vale configuration to a project</a> and <a href="https://docs.errata.ai/vale/config">Vale documentation - configuration</a>.</p>
 <div class="listingblock">
 <div class="content">
-<pre>RedHat.Annotations = suggestion
+<pre>RedHat.Annotations = NO
 RedHat.Slash = warning
 RedHat.Usage = suggestion</pre>
 </div>
 </div>
 </li>
 <li>
-<p>Consider disabling a rule on the spot. See: <a href="https://docs.errata.ai/vale/scoping">Vale - Scoping</a></p>
-<div class="listingblock">
-<div class="content">
-<pre>pass:[&lt;!-- vale RedHat.Spelling = NO --&gt;]
-
-The Spelling rule is ignored for this line.
-
-pass:[&lt;!-- vale RedHat.Spelling = YES --&gt;]
-
-The Spelling rule is active for this line.</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Consider <a href="../creating-a-vocabulary-for-a-project/" class="page">Extending the vocabulary</a>.</p>
-</li>
-<li>
-<p>Consider <a href="../../contributor-guide/extending-the-spelling-rule/" class="page">Extending the <em>Spelling</em> rule</a>.</p>
-</li>
-<li>
-<p>Consider <a href="../../contributor-guide/extending-the-redhat-style/" class="page">Extending the <em>RedHat</em> style</a>.</p>
-</li>
-<li>
-<p>Consider creating an additional style for the project.</p>
+<p>Creating an additional style for the project. See <a href="../adding-vale-configuration-to-a-project/" class="page">Adding vale configuration to a project</a></p>
 </li>
 </ul>
 </div>
@@ -232,7 +291,7 @@ The Spelling rule is active for this line.</pre>
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p><a href="../getting-started-with-vale/" class="page">Getting started with vale</a></p>
+<p><a href="../using-vale-cli/" class="page">Using Vale CLI</a></p>
 </li>
 <li>
 <p><a href="../understanding-vale-output/" class="page">Understanding vale output</a></p>

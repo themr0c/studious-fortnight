@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Glossary :: Vale for Red Hat documentation writers</title>
-    <link rel="canonical" href="https://vale-at-red-hat.github.io/vale-at-red-hat/docs/end-user-guide/glossary/">
-    <meta name="keywords" content="glossary, antora">
+    <title>Using vale GitHub Action :: Vale for Red Hat documentation writers</title>
+    <link rel="canonical" href="https://vale-at-red-hat.github.io/vale-at-red-hat/docs/end-user-guide/using-vale-github-action/">
+    <meta name="keywords" content="vale, github">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="stylesheet" href="../../../_/css/extra.css">
@@ -55,8 +55,8 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../redhat-style-for-vale/">RedHat Style</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="./">Glossary</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../using-vale-cli/">Vale CLI</a>
@@ -79,8 +79,8 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../creating-a-vocabulary-for-a-project/">Extending the vocabulary</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../using-vale-github-action/">GitHub Action</a>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="./">GitHub Action</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
@@ -135,60 +135,47 @@
   <ul>
     <li><a href="../introduction/">Vale for Red Hat documentation writers</a></li>
     <li>End-user guide</li>
-    <li><a href="./">Glossary</a></li>
+    <li><a href="./">GitHub Action</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/vale-at-red-hat/vale-at-red-hat/edit/main/modules/end-user-guide/pages/glossary.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/vale-at-red-hat/vale-at-red-hat/edit/main/modules/end-user-guide/pages/using-vale-github-action.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Glossary</h1>
+<h1 class="page">Using vale GitHub Action</h1>
 <div class="sect1">
-<h2 id="con_vale-command-line-tool_docs"><a class="anchor" href="#con_vale-command-line-tool_docs"></a><code>vale</code> command-line tool</h2>
+<h2 id="proc_using-vale-github-action_docs"><a class="anchor" href="#proc_using-vale-github-action_docs"></a>Using vale GitHub Action</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>vale</code> command-line tool brings code-like linting to prose. Use it to validate language on your local environment or in continuous integration services.</p>
-</div>
-<div class="ulist">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="../using-vale-cli/" class="page">Using Vale CLI</a></p>
-</li>
-<li>
-<p><a href="../using-vale-with-a-continuous-integration-service/" class="page">Using vale with a continuous integration service</a></p>
-</li>
-<li>
-<p><a href="https://docs.errata.ai/vale/about">Vale documentation - <code>vale</code> command-line tool</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="vale-configuration-file_docs"><a class="anchor" href="#vale-configuration-file_docs"></a>Vale configuration file</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Vale configuration file <code>.vale.ini</code> defines:</p>
+<p>Consider using vale GitHub Action when:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>File names patterns to match files to validate</p>
+<p>The goal is to measure or enforce the project compliance with the Style Guides.</p>
 </li>
 <li>
-<p>Active styles and vocabulary</p>
-</li>
-<li>
-<p>Custom content patterns to modify scoping behavior</p>
+<p>The content repository is on GitHub.</p>
 </li>
 </ul>
 </div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Due to the GitHub token permissions, this Action can not post annotations to PRs from forked repositories.
+</td>
+</tr>
+</table>
+</div>
 <div class="ulist">
-<div class="title">Additional resources</div>
+<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p><a href="../using-vale-cli/" class="page">Using Vale CLI</a></p>
@@ -197,106 +184,55 @@
 <p><a href="../adding-vale-configuration-to-a-project/" class="page">Adding vale configuration to a project</a></p>
 </li>
 <li>
-<p><a href="https://docs.errata.ai/vale/config">Vale documentation - Configuration</a></p>
+<p><a href="../defining-a-vale-onboarding-strategy/" class="page">Defining a vale onboarding strategy</a></p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="vale-rule_docs"><a class="anchor" href="#vale-rule_docs"></a>Vale rule</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A Vale rule is a YAML file defining:</p>
-</div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
 <li>
-<p>a language issue, including spelling issues</p>
+<p>Add a <code>.github/workflows/vale.yml</code> file to your repository with following content:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">name: Linting with Vale
+on:
+  - pull_request
+  - push
+jobs:
+  prose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Vale Linter
+        uses: errata-ai/vale-action@v1.4.0
+        with:
+          files: __onlyModified
+          styles: https://github.com/vale-at-red-hat/vale-at-red-hat/releases/latest/download/RedHat.zip
+          config: https://raw.githubusercontent.com/vale-at-red-hat/vale-at-red-hat/master/.vale-for-github-action.ini
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>a proposed solution</p>
+<p>Create a <code>.github/styles</code> directory containing an empty file. The Vale GitHub Action use it to decompress the <em>RedHat</em> style.</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ mkdir .github/styles
+$ touch .github/styles/.placeholder</pre>
+</div>
+</div>
 </li>
-<li>
-<p>a link to more information.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="../redhat-style-for-vale/" class="page"><em>RedHat</em> style for Vale</a></p>
-</li>
-<li>
-<p><a href="https://docs.errata.ai/vale/styles">Vale documentation - Styles</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="con_vale-style_docs"><a class="anchor" href="#con_vale-style_docs"></a>Vale style</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A Vale style is a directory containing a collection of rules.</p>
-</div>
-<div class="ulist">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="../redhat-style-for-vale/" class="page"><em>RedHat</em> style for Vale</a></p>
-</li>
-<li>
-<p><a href="https://docs.errata.ai/vale/styles">Vale documentation - Styles</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="con_vale-vocabulary_docs"><a class="anchor" href="#con_vale-vocabulary_docs"></a>Vale vocabulary</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In a project, a Vale vocabulary is an optional additional directory containing lists of accepted and rejected words, applying to all styles.</p>
-</div>
-<div class="paragraph">
-<p>Consider <a href="../creating-a-vocabulary-for-a-project/" class="page">Extending the vocabulary</a> when:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Missing words in the Vale dictionary are causing Spelling errors</p>
-</li>
-<li>
-<p>The word is too specific to benefit to other projects.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Consider <a href="../../contributor-guide/extending-the-spelling-rule/" class="page">Extending the <em>Spelling</em> rule</a> when:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Missing words in the Vale dictionary are causing Spelling errors</p>
-</li>
-<li>
-<p>Adding the word will benefit to other projects. For example: product and tool names, common terms specific to the software industry.</p>
-</li>
-</ul>
+</ol>
 </div>
 <div class="ulist">
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p><a href="../creating-a-vocabulary-for-a-project/" class="page">Extending the vocabulary</a></p>
-</li>
-<li>
-<p><a href="../../contributor-guide/extending-the-spelling-rule/" class="page">Extending the <em>Spelling</em> rule</a></p>
-</li>
-<li>
-<p><a href="https://docs.errata.ai/vale/vocab">Vale documentation - Vocabulary</a></p>
+<p><a href="https://github.com/errata-ai/vale-action">Vale GitHub action</a>.</p>
 </li>
 </ul>
 </div>

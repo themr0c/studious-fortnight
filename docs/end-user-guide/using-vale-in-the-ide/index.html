@@ -59,13 +59,16 @@
     <a class="nav-link" href="../glossary/">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../getting-started-with-vale/">Getting started</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../understanding-vale-output/">Understanding Vale alerts</a>
+    <a class="nav-link" href="../using-vale-cli/">Vale CLI</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="./">Vale in the IDE</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting-vale-alerts/">Vale reports</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../understanding-vale-output/">Understanding Vale alerts</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../defining-a-vale-onboarding-strategy/">Onboarding strategy</a>
@@ -75,6 +78,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../creating-a-vocabulary-for-a-project/">Extending the vocabulary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-vale-github-action/">GitHub Action</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../using-vale-with-a-continuous-integration-service/">Continuous integration</a>
@@ -141,16 +147,29 @@
 <article class="doc">
 <h1 class="page">Using vale in the IDE</h1>
 <div class="sect1">
-<h2 id="proc_using-vale-on-a-local-environment_docs"><a class="anchor" href="#proc_using-vale-on-a-local-environment_docs"></a>Using vale in the IDE</h2>
+<h2 id="proc_using-vale-in-the-ide_docs"><a class="anchor" href="#proc_using-vale-in-the-ide_docs"></a>Using vale in the IDE</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use vale in the IDE, install the Vale extension for Visual Studio Code. The extension for the Atom IDE is deprecated.</p>
+<p>Consider using Vale in your IDE when:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You want a direct feedback in your editor.</p>
+</li>
+<li>
+<p>You use a supported IDE, such as Visual Studio Code.</p>
+</li>
+</ul>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p><a href="../getting-started-with-vale/" class="page">Getting started with vale</a></p>
+<p>Vale CLI is installed and configured. See <a href="../using-vale-cli/" class="page">Using Vale CLI</a>.</p>
+</li>
+<li>
+<p><a href="https://code.visualstudio.com/docs/setup/setup-overview">Visual Studio Code</a> is installed.</p>
 </li>
 </ul>
 </div>
@@ -158,18 +177,18 @@
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Install <a href="https://code.visualstudio.com/docs/setup/setup-overview">Visual Studio Code</a>.</p>
+<p>In  Visual Studio Code, install the <a href="https://marketplace.visualstudio.com/items?itemName=errata-ai.vale-server">Visual Studio Code extension for Vale using the Marketplace</a>.</p>
 </li>
 <li>
-<p>Install the <a href="https://marketplace.visualstudio.com/items?itemName=errata-ai.vale-server">Visual Studio Code extension for Vale </a>.</p>
-</li>
-<li>
-<p>Configure the extension to use Vale CLI rather than Vale Server.</p>
+<p>Configure the extension to use Vale CLI rather than Vale Server  in the extension settings (<strong>Preferences &gt; Extensions &gt; Vale &gt; Use CLI</strong>).</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">"vale.core.useCLI": true</code></pre>
 </div>
 </div>
+</li>
+<li>
+<p>Restart Visual Studio Code.</p>
 </li>
 </ol>
 </div>
@@ -188,10 +207,7 @@
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p><a href="../understanding-vale-output/" class="page">Understanding vale output</a></p>
-</li>
-<li>
-<p><a href="../defining-a-vale-onboarding-strategy/" class="page">Defining a vale onboarding strategy</a></p>
+<p><a href="https://github.com/errata-ai/vale-vscode">Visual Studio Code extension for Vale repository and documentation</a></p>
 </li>
 </ul>
 </div>
