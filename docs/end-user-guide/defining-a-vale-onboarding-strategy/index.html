@@ -206,6 +206,65 @@
 </div>
 </div>
 <div class="sect2">
+<h3 id="_start_small"><a class="anchor" href="#_start_small"></a>Start small</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>To onboard a collection of repositories, start by the repository with the smallest word count. See <a href="../reporting-vale-alerts/" class="page">Generating extended Vale alerts reports</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_focus_on_errors"><a class="anchor" href="#_focus_on_errors"></a>Focus on errors</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Report only <strong>errors</strong>. Don&#8217;t report <strong>warnings</strong> and <strong>suggestions</strong>.</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ vale --minAlertLevel=error .</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_expect_false_positives"><a class="anchor" href="#_expect_false_positives"></a>Expect false positives</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>RedHat</em> style has been thoroughly tested on a corpus of 113000 words. You can expect false positives when applying the style to a new corpus. Consider <a href="../../contributor-guide/contributing/" class="page">Contributing</a> to the style.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_collect_data"><a class="anchor" href="#_collect_data"></a>Collect data</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../reporting-vale-alerts/" class="page">Generating extended Vale alerts reports</a></p>
+</li>
+<li>
+<p>Use the results to identify the rule creating the most errors, and work on that rule. Most probably, start with the Spelling rule.</p>
+</li>
+<li>
+<p>Report alerts for one single rule. Maybe use custom output templates to generate a custom report. See <a href="https://docs.errata.ai/vale/cli#--output">Vale documentation - <code>--output</code> template</a>. Consider aggregating alerts to identify the most common. Examine the report to distinguish legit alerts from false positives. Use the curated list of false positives to <a href="https://github.com/vale-at-red-hat/vale-at-red-hat/issues">report an issue</a>.</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>For example, for the Spelling rule, create a report containing the list of all words reported by the Spelling rule, and count their occurrences.
+Use that list to differentiate false positives from legit errors. Use the curated list to <a href="https://github.com/vale-at-red-hat/vale-at-red-hat/issues">report an issue</a>.</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_fix_the_alerts"><a class="anchor" href="#_fix_the_alerts"></a>Fix the alerts</h3>
 <div class="ulist">
 <ul>
