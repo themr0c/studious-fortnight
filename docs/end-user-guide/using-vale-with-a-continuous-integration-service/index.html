@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Using vale with a continuous integration service :: Vale for Red Hat documentation writers</title>
-    <link rel="canonical" href="https://vale-at-red-hat.github.io/vale-at-red-hat/docs/end-user-guide/using-vale-with-a-continuous-integration-service/">
+    <link rel="canonical" href="https://redhat-documentation.github.io/vale-at-red-hat/docs/end-user-guide/using-vale-with-a-continuous-integration-service/">
     <meta name="keywords" content="vale">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -24,7 +24,7 @@
           <span></span>
         </button>
         <img src="../../../_/img/project-logo.svg" class="navbar-logo" alt="Project logo">
-        <a href="https://vale-at-red-hat.github.io/vale-at-red-hat/index.html">Vale for Red Hat documentation writers</a>
+        <a href="https://redhat-documentation.github.io/vale-at-red-hat/index.html">Vale for Red Hat documentation writers</a>
       </div>
     </div>
     <div id="topbar-nav" class="navbar-menu">
@@ -138,7 +138,7 @@
     <li><a href="./">Continuous integration</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/vale-at-red-hat/vale-at-red-hat/edit/main/modules/end-user-guide/pages/using-vale-with-a-continuous-integration-service.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/redhat-documentation/vale-at-red-hat/edit/main/modules/end-user-guide/pages/using-vale-with-a-continuous-integration-service.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -200,12 +200,12 @@ tar -xf vale*
 ./vale -v
 
 # Download latest vale configuration from vale-at-red-hat
-curl -Os https://raw.githubusercontent.com/vale-at-red-hat/vale-at-red-hat/master/.vale.ini
+curl -Os https://raw.githubusercontent.com/redhat-documentation/vale-at-red-hat/master/.vale.ini
 
 # Download latest _RedHat_ style
 mkdir .vale/styles || true
 cd .vale/styles
-gh release download --repo 'vale-at-red-hat/vale-at-red-hat' --pattern 'RedHat.zip'
+gh release download --repo 'redhat-documentation/vale-at-red-hat' --pattern 'RedHat.zip'
 unzip RedHat.zip</code></pre>
 </div>
 </div>
