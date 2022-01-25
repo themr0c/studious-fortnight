@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Correct :: Vale for Red Hat documentation writers</title>
+    <link rel="canonical" href="https://redhat-documentation.github.io/vale-at-red-hat/docs/reference-guide/correct/">
+    <meta name="keywords" content="reference, rule, correct">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/extra.css">
+<link rel="stylesheet" href="../../../_/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <button class="navbar-burger" data-target="topbar-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <img src="../../../_/img/project-logo.svg" class="navbar-logo" alt="Project logo">
+        <a href="https://redhat-documentation.github.io/vale-at-red-hat/index.html">Vale for Red Hat documentation writers</a>
+      </div>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item hide-for-print">
+          <script async src="https://cse.google.com/cse.js?cx=002898025167115630151:gnr5edrg2eo"></script>
+          <div class="gcse-searchbox" enableAutoComplete="true"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="gcse-searchresults"></div>
+</header><div class="body">
+<div class="nav-container" data-component="docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../end-user-guide/introduction/">Vale for Red Hat documentation writers</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">End-user guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/introduction/">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/redhat-style-for-vale/">RedHat Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/glossary/">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/using-vale-cli/">Vale CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/using-vale-in-the-ide/">Vale in the IDE</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/reporting-vale-alerts/">Vale reports</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/understanding-vale-output/">Understanding Vale alerts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/defining-a-vale-onboarding-strategy/">Onboarding strategy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/adding-vale-configuration-to-a-project/">Adding to a project</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/creating-a-vocabulary-for-a-project/">Extending the vocabulary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/using-vale-github-action/">GitHub Action</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../end-user-guide/using-vale-with-a-continuous-integration-service/">Continuous integration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../reference-guide/">Reference guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../abbreviations/">Abbreviations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about/">About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../airgap/">Air-gap</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../amd64/">AMD64</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../americanspelling/">American spelling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../andsoon/">And so on</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../animallabels/">Animal labels</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../annotations/">Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../app/">App</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../archaisms/">Archaisms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../as/">As</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../auto-detect/">Auto-detect</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../baremetal/">Bare-metal or bare metal</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../between/">Between</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bimonthly/">Bimonthly</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bind/">BIND</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bios/">BIOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../biweekly/">Biweekly</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootdisk/">Boot-disk</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader/">Boot-loader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bottleneck/">Bottleneck</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bps/">Bps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../broadcast/">Broadcast</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../btrfs/">Btrfs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bugfix/">Bug-fix</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../built-in/">Built-in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../capex/">CapEx</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cd/">CD or cd</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cdone/">CD-one</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cds/">CDs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cdwriter/">CD-writer</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cgroup/">cgroup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ciphertext/">Ciphertext</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cliches/">Cliches</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../clientside/">Client-side or client side</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloud/">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloudbursting/">Cloudbursting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloudwashing/">Cloudwashing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../colocate/">Colocate</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../comma-delimited/">Comma-delimited</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../command-driven/">Command-driven</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../commandlanguage/">Command language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../comma-separatedvalues/">Comma-separated-values</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../complexwords/">Complex words</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configmap/">ConfigMap</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../conjunctions/">Conjunctions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../consciouslanguage/">Conscious language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../container-based/">Container-based</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../containerized/">Containerized</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../contractions/">Contractions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../corporatespeak/">Corporate speak</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="./">correct</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cross-platform/">Cross-platform</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cross-sitescripting/">Cross-site-scripting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../csv/">CSV</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ctrl/">Ctrl</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cygmon/">Cygmon</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../daisychain/">Daisy chain</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dashspacing/">Dash spacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../datacenter/">Data center</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../datamirroring/">Data mirroring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../datapath/">Data-path</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../debug/">Debug</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../definitions/">Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../denialofservice/">Denial-of-service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../desktop/">Desktop</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../devops/">DevOps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../different/">Different</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../diskdruid/">Disk-Druid</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../disk-label/">Disk label</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dns/">DNS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domainname/">domain name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../download/">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../downstream/">Downstream</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dual-boot/">Dual-boot</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dvdwriter/">DVD-writer</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ellipses/">Ellipses</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../emit/">Emit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../environment/">Environment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../examine/">Examine</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../exec-shield/">Exec-Shield</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../exif/">Exif</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fedoraproject/">Fedora-project</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../firmware/">Firmware</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../floatingpoint/">Floating point</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../foreground/">Foreground</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fortran/">Fortran</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fqdn/">FQDN</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../functionality/">Functionality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gb/">GB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gbps/">Gbps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gid/">GID</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gimp/">GIMP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../git/">Git</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gnome/">GNOME</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gnomeclassic/">GNOME-Classic</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gnu/">GNU</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gpl/">GPL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../grayscale/">Grayscale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../grub/">GRUB</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gtkplus/">GTKplus</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hardcode/">Hard-code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hard-coded/">Hard-coded</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../headingpunctuation/">Heading punctuation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../headings/">Headings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../healthcheck/">Health check</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../helpdesk/">Help desk</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hostgroup/">Host-group</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hostname/">Hostname</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hotadd/">Hot add</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hotline/">Hotline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hotplug/">Hot plug</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hotswap/">Hot swap</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hpproliant/">HP-ProLiant</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hugepage/">Huge-page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hyperconverged/">Hyperconverged</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hyper-threading/">Hyper-Threading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hypervisor/">hypervisor</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ibmeserversystemp/">IBM eServer System p</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ibms390/">IBM-S-390</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ibmz/">IBM-Z</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../infiniband/">InfiniBand</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../insecure/">Insecure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../insight/">Insight</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installationprogram/">Installation-program</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../intelep80579integratedprocessor/">Intel-EP80579-Integrated-Processor</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../intelvirtualizationtechnology/">Intel-Virtualization-Technology</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../iops/">IOPS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ip/">IP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ipsec/">IPsec</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../iseries/">ISeries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../iso/">ISO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../isoimage/">ISO-image</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../itanium/">Itanium</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../itanium2/">Itanium-2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jbosscommunity/">JBoss Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jvm/">JVM</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../kernel-basedvirtualmachine/">Kernel-based-Virtual-Machine</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../kerneloops/">Kernel oops</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../kernel-space/">Kernel-space</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../kickstart/">Kickstart</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledgebase/">Knowledge-base</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../kvm/">KVM</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../lan/">LAN</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../latin/">Latin</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../linux/">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../manpage/">Man-page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../many/">Many</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../matrixes/">Matrixes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menu-driven/">Menu-driven</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../microsoft/">Microsoft</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mousebutton/">Mouse button</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mozilla/">Mozilla</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ms-dos/">MS-DOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../multiprocessing/">Multiprocessing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../multitenant/">Multitenant</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../must/">must</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mysql/">MySQL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../need/">Need</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../now/">Now</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../objectivec/">Objective C</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../offlinebackup/">Offline-backup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ok/">OK</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../omit/">Omit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../opcodes/">Opcodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../opensource/">Open source</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../operatingenvironment/">Operating-environment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../operatingsystem/">Operating-system</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../opex/">OpEx</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../override/">Override</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../oxfordcomma/">Oxford comma</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../passivevoice/">Passive voice</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../performancecounter/">Performance-counter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plaintext/">Plain text</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pop-up/">Pop-up</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../posix/">POSIX</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../postscript/">PostScript</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../powerpc/">PowerPC</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ppp/">PPP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../productnames/">Product names</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../prom/">PROM</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../proofofconcept/">Proof of concept</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pseudo-ops/">Pseudo-ops</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pulldown/">Pulldown</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../qanda/">Q-and-A</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../qcow2/">QCOW2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../qeth/">qeth</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ram/">RAM</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ramdisk/">RAM disk</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../raw/">Raw</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../readabilitygrade/">Readability grade</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../recommend/">Recommending</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../redboot/">RedBoot</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../redhatnetworkproxyserver/">Red-Hat-Network-Proxy-Server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../redhatnetworksatelliteserver/">Red-Hat-Network-Satellite-Server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../releasenotes/">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../remoteaccess/">Remote Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../remoteaccessserver/">Remote access server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../repository/">Repository</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rollout/">Roll-out versus roll out</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rom/">ROM</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../roundtable/">Roundtable</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rpm/">RPM</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../runlevel/">Runlevel</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../samba/">Samba</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../screensaver/">Screen-saver</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scrollbar/">Scrollbar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../see/">See</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../segmentationfault/">Segmentation-fault</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../selinux/">SELinux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../sentencelength/">Sentence length</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../servercluster/">Server-cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../serverfarm/">Server-farm</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../shadowman/">Shadowman</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../shadowpasswords/">Shadow-passwords</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../shadow-utilities/">Shadow-utilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../sharename/">Share-name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../shellprompt/">Shell prompt</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../slash/">Slash</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../socks/">SOCKS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../softwarecollection/">Software-collection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../soundcard/">Sound card</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../source-navigator/">Source-navigator</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../spacing/">Spacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specfile/">Spec-file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specific/">Specific</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../spelled/">Spelled</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../spelling/">Spelling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../s-record/">S-record</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../sr-iov/">SR-IOV</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ssh/">SSH</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ssl-tls/">SSL/TLS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../standalone/">Standalone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../staroffice/">StarOffice</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../startx/">startx</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../straightforward/">Straightforward</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../su/">Su</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../subcommand/">Subcommand</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../subdirectory/">Subdirectory</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../submenu/">Submenu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../subpackage/">Subpackage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../subscription/">Subscription</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../superuser/">Superuser</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../swapspace/">Swap-space</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../systemd/">Systemd</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../sysv/">SysV</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tab/">Tab</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../terms/">Terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../text-based/">Text-based</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../textmode/">Text mode</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../thereis/">There is</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../thin-provisioned/">Thin-provisioned</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../through/">Through</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../throughput/">Throughput</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tier-1/">Tier-1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../timeframe/">Time frame</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ttl/">TTL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../uid/">UID</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ultrasparc/">UltraSPARC</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../unix/">UNIX</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../upgrade/">Upgrade</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../upsell/">Upsell</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../upselling/">Upselling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../upstream/">Upstream</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../uptime/">Uptime</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../url/">URL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../usage/">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user-space/">User-space or user space</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using/">Using</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../var/">VAR</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../vdsm/">VDSM</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../verify/">Verify</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../vi/">Vi</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../videomode/">Video mode</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../vim/">Vim</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../virtual/">Virtual</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../virtualconsole/">Virtual console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../vlan/">VLAN</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../vnic/">vNIC</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../vnumanode/">vNUMA node</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../vpn/">VPN</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../wan/">WAN</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../want/">Want</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../wca/">WCA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../webui/">Web UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../which/">Which</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../windowmaker/">Window Maker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../wordiness/">Wordiness</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../write/">Write</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../xemacs/">XEmacs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../xterm/">xterm</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../yaml/">YAML</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../you/">You</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Contributor guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/contributing/">Contributing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/vale-at-red-hat-repository/">Repository</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-spelling-rule/">Extending <em>Spelling</em></a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contributor-guide/extending-the-redhat-style/">Extending rules</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Vale for Red Hat documentation writers</span>
+    <span class="version">main</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../end-user-guide/introduction/">Vale for Red Hat documentation writers</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../end-user-guide/introduction/">main</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../end-user-guide/introduction/" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../end-user-guide/introduction/">Vale for Red Hat documentation writers</a></li>
+    <li><a href="../reference-guide/">Reference guide</a></li>
+    <li><a href="./">correct</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/redhat-documentation/vale-at-red-hat/edit/main/modules/reference-guide/pages/correct.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Correct</h1>
+<div class="paragraph">
+<p>Use <code>correct</code> or <code>as expected</code> rather than <code>alright</code>.</p>
+</div>
+<div class="ulist">
+<div class="title">Additional Resources</div>
+<ul>
+<li>
+<p><a href="https://redhat-documentation.github.io/supplementary-style-guide/#air-gap" class="bare">https://redhat-documentation.github.io/supplementary-style-guide/#air-gap</a></p>
+</li>
+</ul>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
